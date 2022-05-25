@@ -7,14 +7,6 @@
       "price": "21.90",
       "available": true,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png"
-    },
-    {
-      "image": "https://betterstudio.com/wp-content/uploads/2019/05/1-1-instagram-1024x1024.jpg",
-      "name": "Test",
-      "price": "100.10",
-      "description": "Meu tESTE",
-      "available": true,
-      "id": 3
     }
   ]
 }

@@ -1,10 +1,20 @@
 import { useState } from 'react';
 import { FiEdit3, FiTrash } from 'react-icons/fi';
 
+import { FoodType } from '../../types';
+
 import { Container } from './styles';
 import api from '../../services/api';
 
-function Food(props) {
+
+interface FoodProps {
+  key: number,
+  food: FoodType,
+  handleDelete: (id: number) => void,
+  handleEditFood: (food: FoodType) => void,
+}
+
+function Food(props: FoodProps) {
   const { food, handleDelete, handleEditFood } = props
   const { available } = food
   const [isAvailable, setIsAvailable] = useState(available);
@@ -25,7 +35,7 @@ function Food(props) {
   return (
     <Container available={isAvailable}>
       <header>
-        <img src={food.image} alt={food.name} width="200"/>
+        <img src={food.image} alt={food.name}/>
       </header>
       <section className="body">
         <h2>{food.name}</h2>
